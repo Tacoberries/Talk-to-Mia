@@ -4,6 +4,6 @@ Sua lógica principal funciona a partir de receber um prompt de texto, definir u
 
 Para instalar as bibliotecas necessárias, rode os seguintes códigos em seu Workspace:
 
-pip install space |
+pip install spacy |
 python -m spacy download en_core_web_sm |
 pip install scikit-learn |
