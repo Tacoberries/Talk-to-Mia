@@ -1,0 +1,24 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chatbot</title>
+</head>
+<body>
+    <h1>Chatbot</h1>
+    <div id="chat-container">
+        <!-- Aqui as respostas do chatbot serão exibidas em tempo real -->
+    </div>
+    <input type="text" id="user-input" name="user_message" placeholder="Digite sua pergunta...">
+    <button id="send-button">Enviar</button>
+
+    <!-- Adicione o token CSRF em um campo oculto -->
+    <input type="hidden" name="csrfmiddlewaretoken" value="{% csrf_token %}">
+
+    <!-- JavaScript para interagir com o chatbot -->
+    <script src="{% static 'js/chat.js' %}"></script>
+</body>
+</html>
+
+
