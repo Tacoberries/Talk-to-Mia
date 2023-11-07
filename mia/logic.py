@@ -3,9 +3,26 @@ import random
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.svm import LinearSVC
 
-nlp = spacy.load("en_core_web_sm")
+nlp = spacy.load("pt_core_news_sm")
 
 train_data = [
+    # Sobre Mia
+    ("O que você pode fazer?", "mia_capacidade"),
+    ("Como você funciona?", "mia_capacidade"),
+    ("Sobre quais assuntos você consegue responder?", "mia_assuntos"),  
+    ("Quem é você?", "mia_apresentação"),
+    ("O que é você?", "mia_apresentação"),
+    ("Qual seu nome?", "mia_apresentação"),
+    ("O que você faz?", "mia_propósito"),
+    ("Quem é você, Mia?", "mia_apresentação"),
+    ("O que é a Mia?", "mia_apresentação"),
+    ("Mia, pode se apresentar?", "mia_apresentação"),
+    ("Explique o que você é, Mia.", "mia_apresentação"),
+    ("Mia, qual é o seu propósito?", "mia_propósito"),
+    ("Qual é a sua função, Mia?", "mia_propósito"),
+    ("Mia, por que você foi criada?", "mia_propósito"),
+    ("O que você faz, Mia?", "mia_propósito"),
+    
     # Jogos
     ("Me recomende um jogo.", "jogo"),
     ("Tem alguma recomendação de jogo?", "jogo"),
@@ -308,6 +325,19 @@ def classify_intent(text):
 
 # Base de Respostas
 knowledge_base = {
+    "mia_assuntos": [
+        "Eu tenho respostas prontas para os assuntos clima, filmes, restaurantes, direções, esportes, piadas, jogos, livros, programação, notícias, comida, e filosofia. Tente me pedir sobre recomendações de jogos ou filmes!",
+    ],
+    "mia_apresentação": [
+        "Eu sou a Mia, uma IA desenvolvida por um grupinho legal para interagir com você e fornecer informações, assistência e entretenimento.",
+        "Meu nome é Mia. Estou aqui para responder às suas perguntas e oferecer ajuda de várias maneiras.",
+        "Meu nome é, e sou uma IA que pode responder á algumas perguntas pré-determinadas, projetada para ser uma assistente virtual versátil.",
+    ],
+    "mia_propósito": [
+        "Meu propósito é facilitar nossa comunicação, fornecer informações úteis e envolver você em conversas interativas.",
+        "Fui criada para responder a uma ampla variedade de perguntas com respostas pré-definidas. Por enquanto, eu só consigo dar respostas sobre alguns assuntos, por isso desculpe se eu não conseguir responder algo, ou repetir minhas respostas!",
+        "Estou aqui para tornar a busca por informações e a interação com a tecnologia mais acessíveis e convenientes para você.",
+    ],
     "clima": [
         "Hoje está {clima} e {temperatura}.",
         "Espera-se algumas chuvas esta tarde.",
