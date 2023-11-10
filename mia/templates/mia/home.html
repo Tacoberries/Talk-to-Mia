@@ -3,10 +3,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Chatbot</title>
+    <title>Talk to Mia</title>
 </head>
 <body>
-    <h1>Chatbot</h1>
+    <h1>Talk to Mia</h1>
     <div id="chat-container">
         <!-- Aqui as respostas do chatbot serão exibidas em tempo real -->
     </div>
@@ -18,6 +18,16 @@
 
     <!-- JavaScript para interagir com o chatbot -->
     <script src="{% static 'js/chat.js' %}"></script>
+    <script>
+        // Adiciona um ouvinte de evento para a tecla "Enter" no campo de entrada
+        document.getElementById("user-input").addEventListener("keyup", function(event) {
+            // Verifica se a tecla pressionada é "Enter"
+            if (event.key === "Enter") {
+                // Simula um clique no botão de envio
+                document.getElementById("send-button").click();
+            }
+        });
+    </script>
 </body>
 </html>
 

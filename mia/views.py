@@ -22,7 +22,7 @@ def mia_api(request):
         # Adicionar informações de depuração
         print(f"Intent: {intent}")
 
-        mia_response = logic.generate_response(intent, logic.context)
+        mia_response = logic.generate_response(intent)
 
         # Adicionar informações de depuração
         print(f"Mia Response: {mia_response}")

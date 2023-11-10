@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const sendButton = document.getElementById('send-button');
 
     sendButton.addEventListener('click', function() {
-        const userMessage = userInput.value;
+        const userMessage = userInput.value;    
         userInput.value = ''; // Limpa o campo de entrada
 
         // Enviar a pergunta do usuário para o servidor Django
