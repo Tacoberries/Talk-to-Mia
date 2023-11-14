@@ -4,9 +4,19 @@
 
 train_data = [
     # Sobre Mia
-    ("O que você pode | é capaz de fazer?", "mia_capacidade"),
+    ("O que você é capaz de fazer?", "mia_capacidade"),
     ("Como você funciona?", "mia_capacidade"),
-    ("Sobre quais assuntos | tópicos | topicos você consegue | é capaz | consegue responder?", "mia_assuntos"),  
+    ("Sobre quais assuntos consegue responder?", "mia_assuntos"),
+    ("Quais são os tópicos que você domina?", "mia_assuntos"),
+    ("Em quais áreas você tem conhecimento?", "mia_assuntos"),
+    ("Pode me dizer sobre quais temas você sabe?", "mia_assuntos"),
+    ("Sobre quais assuntos você pode falar?", "mia_assuntos"),
+    ("Quais são os temas que você entende?", "mia_assuntos"),
+    ("Há alguma área específica em que você seja especialista?", "mia_assuntos"),
+    ("Pode compartilhar sobre quais tópicos você tem informações?", "mia_assuntos"),
+    ("Diga-me em quais assuntos você é versada?", "mia_assuntos"),
+    ("Quais são os campos que você cobre?", "mia_assuntos"),
+    ("Posso perguntar sobre qualquer coisa, ou há tópicos específicos que você domina?", "mia_assuntos"),  
     ("Quem é você?", "mia_apresentação"),
     ("O que é você?", "mia_apresentação"),
     ("Qual seu nome?", "mia_apresentação"),
