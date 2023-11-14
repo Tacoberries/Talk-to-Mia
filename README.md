@@ -32,3 +32,5 @@ pip install -r ./requirements.txt
 <pre>
 python manage.py runserver
 </pre>
+
+# ALERTA: O scikit-learn É UMA DEPENDÊNCIA PESADA
